@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login_app/ui/login_app/login_app.dart';
+import 'ui/login_app/login_app.dart';
 
-void main() => runApp(new MaterialApp(
-  title: 'Stock Prediction',
-  home: new LoginPage(),
-));
+void main() => runApp(new MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'Flutter Simple Login Demo',
+      theme: new ThemeData(
+          primarySwatch: Colors.blue
+      ),
+      home: new LoginPage(),
+    );
+  }
+}
+

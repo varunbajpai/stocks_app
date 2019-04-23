@@ -2,8 +2,9 @@ import 'package:flutter_login_app/ui/login_app/login_app.dart';
 import '../about_page/AboutPage.dart';
 import 'package:flutter/material.dart';
 import 'search_configuration.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
-
+final GoogleSignIn  _googleSignIn = new GoogleSignIn();
 
 
 class SearchList extends StatelessWidget {
@@ -38,10 +39,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   bool _checkbox_value1 = false;
   bool _checkbox_value2 = false;
-
-
-
   var items = List<String>();
+
 
   @override
   void initState() {
@@ -75,8 +74,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(onWillPop: () async => false,
-      child: new Scaffold(
+    return  new Scaffold(
+      appBar: new AppBar(
+        title: new Text(widget.title),
+      ),
         drawer: Drawer(
           child: ListView(
             children: <Widget>[
@@ -89,6 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 title: Text("Logout"),
                 trailing: Icon(Icons.call_missed),
                 onTap: (){
+                  _googleSignIn.signOut();
                   Navigator.pop(context);
                   Navigator.push(
                     context,
@@ -110,10 +112,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
 
-        appBar: new AppBar(
-          title: new Text(widget.title),
-        ),
-        body: Container(
+
+        body:  Container(
           child: Column(
             children: <Widget>[
               Padding(
@@ -176,7 +176,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
         ),
-      ),
-    );
+      );
   }
 }

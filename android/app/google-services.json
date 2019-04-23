@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "408350680686",
+    "firebase_url": "https://stockpricingprediction.firebaseio.com",
+    "project_id": "stockpricingprediction",
+    "storage_bucket": "stockpricingprediction.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408350680686:android:04ddc37671f213dd",
+        "android_client_info": {
+          "package_name": "com.example.flutter_login_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "408350680686-jpk7ak4obgo03gs7cacq5c7jop4mkh32.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flutter_login_app",
+            "certificate_hash": "fa82e15d373b570d0cb9311fbe693c4da5fa574e"
+          }
+        },
+        {
+          "client_id": "408350680686-b6qk15o34rvqsek9lsmjf4kj22797ku6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8EfmYsRL4cPApRu5HaCC0n9NAupf97P8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "408350680686-b6qk15o34rvqsek9lsmjf4kj22797ku6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
