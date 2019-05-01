@@ -24,6 +24,7 @@ dependencies:
   charts_flutter: any
   fcharts: any
   flutter_sparkline: any
+  firebase_database: any
   autocomplete_textfield: ^1.6.4
   flutter:
     sdk: flutter

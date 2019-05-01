@@ -22,12 +22,29 @@ class SegmentsLineChart extends StatelessWidget {
     return new Scaffold(
       appBar: AppBar(title: new Text('Compare Prices'),),
       body:
-      Container(
-        height: 400,
-        child: new charts.LineChart(seriesList,
-          defaultRenderer:
-          new charts.LineRendererConfig(includeArea: true, stacked: true),
-          animate: animate),
+      Column(
+        children: <Widget>[
+          Container(
+            height: 220,
+            child: new charts.LineChart(seriesList,
+              defaultRenderer:
+              new charts.LineRendererConfig(includeArea: true, stacked: true),
+              animate: animate),
+          ),
+          new Text('Last month Trends Predictions VS Actual'),
+
+
+          Container(
+            height: 220,
+            child: new charts.LineChart(seriesList,
+                defaultRenderer:
+                new charts.LineRendererConfig(includeArea: true, stacked: true),
+                animate: animate),
+          ),
+          new Text('Next month Trends Predictions to be done'),
+
+
+        ],
       ),
     );
   }
