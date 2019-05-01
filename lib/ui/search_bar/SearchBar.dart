@@ -3,6 +3,9 @@ import '../about_page/AboutPage.dart';
 import 'package:flutter/material.dart';
 import 'search_configuration.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import '../show_graph/show_graph.dart';
+import 'graph_data.dart';
+
 
 final GoogleSignIn  _googleSignIn = new GoogleSignIn();
 
@@ -32,7 +35,6 @@ class MyHomePage extends StatefulWidget {
 
 
 
-
 class _MyHomePageState extends State<MyHomePage> {
   TextEditingController editingController = TextEditingController();
   final duplicateItems = stocks_list;
@@ -40,6 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
   bool _checkbox_value1 = false;
   bool _checkbox_value2 = false;
   var items = List<String>();
+
 
 
   @override
@@ -167,7 +170,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       leading: CircleAvatar(child :Text('${items[index][0]}')),
                       title: Text('${items[index]}'),
                       onTap: (){
-                        print('${items[index]}');                                 //Will be calling the Neural Network based Code from here
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SegmentsLineChart(GetData.getDataFromAPI(items[index])),
+                          ), //On successful Login redirects to LoginApp
+                        );
                       },
                     );
                   },
@@ -179,3 +186,6 @@ class _MyHomePageState extends State<MyHomePage> {
       );
   }
 }
+
+
+

@@ -21,6 +21,9 @@ dependencies:
   material_search: ^0.2.8
   google_sign_in: ^4.0.1+3
   firebase_auth: ^0.8.4+5
+  charts_flutter: any
+  fcharts: any
+  flutter_sparkline: any
   autocomplete_textfield: ^1.6.4
   flutter:
     sdk: flutter
